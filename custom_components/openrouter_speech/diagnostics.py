@@ -1,0 +1,18 @@
+"""Diagnostics support for OpenRouter Speech."""
+
+from typing import Any
+
+from homeassistant.components.diagnostics import async_redact_data
+from homeassistant.const import CONF_API_KEY
+from homeassistant.core import HomeAssistant
+
+from . import OpenRouterConfigEntry
+
+TO_REDACT = {CONF_API_KEY}
+
+
+async def async_get_config_entry_diagnostics(
+    hass: HomeAssistant, entry: OpenRouterConfigEntry
+) -> dict[str, Any]:
+    """Return diagnostics for a config entry."""
+    return {"entry": async_redact_data(entry.as_dict(), TO_REDACT)}

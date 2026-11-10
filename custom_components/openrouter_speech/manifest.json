@@ -1,0 +1,12 @@
+{
+  "domain": "openrouter_speech",
+  "name": "OpenRouter Speech",
+  "codeowners": ["@alexandrevilain"],
+  "config_flow": true,
+  "documentation": "https://github.com/alexandrevilain/ha-openrouter-speech",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/alexandrevilain/ha-openrouter-speech/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}

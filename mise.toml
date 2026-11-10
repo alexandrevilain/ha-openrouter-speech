@@ -1,0 +1,15 @@
+[tools]
+python = "3.14"
+uv = "0.12.5"
+
+[env]
+_.python.venv = { path = ".venv", create = true }
+
+[tasks.install]
+run = "uv sync"
+
+[tasks.lint]
+run = ["ruff check .", "ruff format --check .", "mypy"]
+
+[tasks.test]
+run = "pytest"

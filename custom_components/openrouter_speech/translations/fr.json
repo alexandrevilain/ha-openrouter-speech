@@ -1,0 +1,110 @@
+{
+  "config": {
+    "abort": {
+      "already_configured": "Cette clé d'API est déjà configurée",
+      "reauth_successful": "Ré-authentification réussie",
+      "reconfigure_successful": "Reconfiguration réussie"
+    },
+    "error": {
+      "cannot_connect": "Impossible de se connecter à OpenRouter",
+      "invalid_auth": "Clé d'API invalide",
+      "unknown": "Erreur inattendue"
+    },
+    "step": {
+      "user": {
+        "description": "Configurez la reconnaissance et la synthèse vocales via OpenRouter.",
+        "data": {
+          "api_key": "Clé d'API",
+          "base_url": "URL de base"
+        },
+        "data_description": {
+          "api_key": "Votre clé d'API OpenRouter (https://openrouter.ai/settings/keys).",
+          "base_url": "Gardez la valeur par défaut sauf si vous utilisez une autre région OpenRouter, par ex. https://eu.openrouter.ai/api/v1."
+        }
+      },
+      "reauth_confirm": {
+        "description": "Votre clé d'API OpenRouter a été refusée. Saisissez-en une nouvelle.",
+        "data": {
+          "api_key": "Clé d'API",
+          "base_url": "URL de base"
+        },
+        "data_description": {
+          "api_key": "Votre clé d'API OpenRouter (https://openrouter.ai/settings/keys).",
+          "base_url": "Gardez la valeur par défaut sauf si vous utilisez une autre région OpenRouter, par ex. https://eu.openrouter.ai/api/v1."
+        }
+      },
+      "reconfigure": {
+        "description": "Modifiez votre clé d'API OpenRouter ou l'URL de base.",
+        "data": {
+          "api_key": "Clé d'API",
+          "base_url": "URL de base"
+        },
+        "data_description": {
+          "api_key": "Votre clé d'API OpenRouter (https://openrouter.ai/settings/keys).",
+          "base_url": "Gardez la valeur par défaut sauf si vous utilisez une autre région OpenRouter, par ex. https://eu.openrouter.ai/api/v1."
+        }
+      }
+    }
+  },
+  "config_subentries": {
+    "stt": {
+      "abort": {
+        "entry_not_loaded": "Impossible de modifier les services tant que l'intégration n'est pas chargée.",
+        "reconfigure_successful": "Reconfiguration réussie"
+      },
+      "entry_type": "Reconnaissance vocale",
+      "initiate_flow": {
+        "user": "Ajouter un service de reconnaissance vocale",
+        "reconfigure": "Reconfigurer le service de reconnaissance vocale"
+      },
+      "step": {
+        "init": {
+          "data": {
+            "name": "Nom",
+            "model": "Modèle",
+            "language_mode": "Langue"
+          },
+          "data_description": {
+            "model": "N'importe quel identifiant de modèle de transcription OpenRouter.",
+            "language_mode": "Envoyer la langue du pipeline Assist comme indication, ou laisser le modèle la détecter."
+          }
+        }
+      }
+    },
+    "tts": {
+      "abort": {
+        "entry_not_loaded": "Impossible de modifier les services tant que l'intégration n'est pas chargée.",
+        "reconfigure_successful": "Reconfiguration réussie"
+      },
+      "entry_type": "Synthèse vocale",
+      "initiate_flow": {
+        "user": "Ajouter un service de synthèse vocale",
+        "reconfigure": "Reconfigurer le service de synthèse vocale"
+      },
+      "error": {
+        "invalid_voice": "Cette voix n'est pas disponible pour le modèle choisi"
+      },
+      "step": {
+        "init": {
+          "data": {
+            "name": "Nom",
+            "model": "Modèle",
+            "voice": "Voix par défaut"
+          },
+          "data_description": {
+            "model": "N'importe quel identifiant de modèle de synthèse vocale OpenRouter.",
+            "voice": "Voix publiées par OpenRouter pour ce modèle. Laissez vide si le modèle n'en propose pas."
+          }
+        }
+      }
+    }
+  },
+  "selector": {
+    "language_mode": {
+      "options": {
+        "pipeline": "Utiliser la langue du pipeline",
+        "auto": "Détection automatique"
+      }
+    }
+  }
+}

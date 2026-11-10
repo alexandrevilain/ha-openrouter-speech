@@ -1,0 +1,110 @@
+{
+  "config": {
+    "abort": {
+      "already_configured": "This API key is already configured",
+      "reauth_successful": "Re-authentication was successful",
+      "reconfigure_successful": "Reconfiguration was successful"
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to OpenRouter",
+      "invalid_auth": "Invalid API key",
+      "unknown": "Unexpected error"
+    },
+    "step": {
+      "user": {
+        "description": "Set up speech-to-text and text-to-speech through OpenRouter.",
+        "data": {
+          "api_key": "API key",
+          "base_url": "Base URL"
+        },
+        "data_description": {
+          "api_key": "Your OpenRouter API key (https://openrouter.ai/settings/keys).",
+          "base_url": "Leave the default unless you use another OpenRouter region, e.g. https://eu.openrouter.ai/api/v1."
+        }
+      },
+      "reauth_confirm": {
+        "description": "Your OpenRouter API key was rejected. Enter a new one.",
+        "data": {
+          "api_key": "API key",
+          "base_url": "Base URL"
+        },
+        "data_description": {
+          "api_key": "Your OpenRouter API key (https://openrouter.ai/settings/keys).",
+          "base_url": "Leave the default unless you use another OpenRouter region, e.g. https://eu.openrouter.ai/api/v1."
+        }
+      },
+      "reconfigure": {
+        "description": "Update your OpenRouter API key or base URL.",
+        "data": {
+          "api_key": "API key",
+          "base_url": "Base URL"
+        },
+        "data_description": {
+          "api_key": "Your OpenRouter API key (https://openrouter.ai/settings/keys).",
+          "base_url": "Leave the default unless you use another OpenRouter region, e.g. https://eu.openrouter.ai/api/v1."
+        }
+      }
+    }
+  },
+  "config_subentries": {
+    "stt": {
+      "abort": {
+        "entry_not_loaded": "Cannot change services while the integration is not loaded.",
+        "reconfigure_successful": "Reconfiguration was successful"
+      },
+      "entry_type": "Speech-to-text",
+      "initiate_flow": {
+        "user": "Add speech-to-text service",
+        "reconfigure": "Reconfigure speech-to-text service"
+      },
+      "step": {
+        "init": {
+          "data": {
+            "name": "Name",
+            "model": "Model",
+            "language_mode": "Language"
+          },
+          "data_description": {
+            "model": "Any OpenRouter transcription model ID.",
+            "language_mode": "Send the Assist pipeline language as a hint, or let the model detect it."
+          }
+        }
+      }
+    },
+    "tts": {
+      "abort": {
+        "entry_not_loaded": "Cannot change services while the integration is not loaded.",
+        "reconfigure_successful": "Reconfiguration was successful"
+      },
+      "entry_type": "Text-to-speech",
+      "initiate_flow": {
+        "user": "Add text-to-speech service",
+        "reconfigure": "Reconfigure text-to-speech service"
+      },
+      "error": {
+        "invalid_voice": "This voice is not available for the selected model"
+      },
+      "step": {
+        "init": {
+          "data": {
+            "name": "Name",
+            "model": "Model",
+            "voice": "Default voice"
+          },
+          "data_description": {
+            "model": "Any OpenRouter text-to-speech model ID.",
+            "voice": "Voices published by OpenRouter for the model. Leave empty if the model has none."
+          }
+        }
+      }
+    }
+  },
+  "selector": {
+    "language_mode": {
+      "options": {
+        "pipeline": "Use the pipeline language",
+        "auto": "Auto-detect"
+      }
+    }
+  }
+}
