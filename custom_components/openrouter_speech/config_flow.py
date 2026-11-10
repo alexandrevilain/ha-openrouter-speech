@@ -32,6 +32,7 @@ from homeassistant.helpers.typing import VolDictType
 
 from .api import OpenRouterAuthError, OpenRouterClient, OpenRouterError
 from .const import (
+    API_KEY_SETTINGS_URL,
     CONF_BASE_URL,
     CONF_LANGUAGE_MODE,
     CONF_MODEL,
@@ -45,6 +46,7 @@ from .const import (
     LOGGER,
     RECOMMENDED_STT_OPTIONS,
     RECOMMENDED_TTS_OPTIONS,
+    REGIONAL_BASE_URL_EXAMPLE,
     STT_MODELS,
     TTS_MODELS,
     recommended_tts_options,
@@ -138,6 +140,11 @@ class OpenRouterSpeechConfigFlow(ConfigFlow, domain=DOMAIN):
                 {**(entry.data if entry else {}), **(user_input or {})},
             ),
             errors=errors,
+            # URLs live here, not in the translation strings (hassfest rule).
+            description_placeholders={
+                "api_key_url": API_KEY_SETTINGS_URL,
+                "base_url_example": REGIONAL_BASE_URL_EXAMPLE,
+            },
         )
 
     async def async_step_reauth(

@@ -12,6 +12,10 @@ DEFAULT_NAME = "OpenRouter Speech"
 DEFAULT_STT_NAME = "OpenRouter STT"
 DEFAULT_TTS_NAME = "OpenRouter TTS"
 DEFAULT_BASE_URL = "https://openrouter.ai/api/v1"
+# Passed to the config flow as description placeholders: hassfest forbids
+# URLs in strings.json / translations, they must come from the code.
+API_KEY_SETTINGS_URL = "https://openrouter.ai/settings/keys"
+REGIONAL_BASE_URL_EXAMPLE = "https://eu.openrouter.ai/api/v1"
 
 CONF_BASE_URL = "base_url"
 CONF_MODEL = "model"

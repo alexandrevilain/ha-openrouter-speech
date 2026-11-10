@@ -1,6 +1,7 @@
 {
   "domain": "openrouter_speech",
   "name": "OpenRouter Speech",
+  "categories": ["ai_voice.speech"],
   "codeowners": ["@alexandrevilain"],
   "config_flow": true,
   "documentation": "https://github.com/alexandrevilain/ha-openrouter-speech",
