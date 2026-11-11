@@ -18,8 +18,8 @@
           "base_url": "URL de base"
         },
         "data_description": {
-          "api_key": "[%api_key_url%]",
-          "base_url": "Gardez la valeur par défaut sauf si vous utilisez une autre région OpenRouter."
+          "api_key": "Votre clé d'API OpenRouter ({api_key_url}).",
+          "base_url": "Gardez la valeur par défaut sauf si vous utilisez une autre région OpenRouter, par ex. {base_url_example}."
         }
       },
       "reauth_confirm": {
@@ -29,8 +29,8 @@
           "base_url": "URL de base"
         },
         "data_description": {
-          "api_key": "[%api_key_url%]",
-          "base_url": "Gardez la valeur par défaut sauf si vous utilisez une autre région OpenRouter."
+          "api_key": "Votre clé d'API OpenRouter ({api_key_url}).",
+          "base_url": "Gardez la valeur par défaut sauf si vous utilisez une autre région OpenRouter, par ex. {base_url_example}."
         }
       },
       "reconfigure": {
@@ -40,8 +40,8 @@
           "base_url": "URL de base"
         },
         "data_description": {
-          "api_key": "[%api_key_url%]",
-          "base_url": "Gardez la valeur par défaut sauf si vous utilisez une autre région OpenRouter."
+          "api_key": "Votre clé d'API OpenRouter ({api_key_url}).",
+          "base_url": "Gardez la valeur par défaut sauf si vous utilisez une autre région OpenRouter, par ex. {base_url_example}."
         }
       }
     }
